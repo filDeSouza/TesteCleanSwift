@@ -7,7 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol LoginDisplayLogic: AnyObject {
+    func displaySomething(viewModel: Login.Something.ViewModel)
+}
+
+class LoginViewController: UIViewController, LoginDisplayLogic {
+    func displaySomething(viewModel: Login.Something.ViewModel) {
+        <#code#>
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

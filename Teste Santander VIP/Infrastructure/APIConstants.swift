@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class APIConstants{
+    static let base_url: String = "https://api.mobile.test.solutis.xyz"
+}

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class APIRequest{
+    
+    func login(url: String, completion: @escaping APIResultParse){
+        
+        
+        
+    }
+    
+}

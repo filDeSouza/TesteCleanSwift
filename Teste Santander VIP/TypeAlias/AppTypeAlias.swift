@@ -6,3 +6,5 @@
 //
 
 import Foundation
+
+typealias APIResultParse = (LoginModel) -> ()

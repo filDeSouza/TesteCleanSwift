@@ -1,0 +1,6 @@
+framework module Pods_Teste_Santander_VIP {
+  umbrella header "Pods-Teste Santander VIP-umbrella.h"
+
+  export *
+  module * { export * }
+}

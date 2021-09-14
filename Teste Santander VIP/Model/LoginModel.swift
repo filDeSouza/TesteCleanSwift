@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class LoginModel: Codable{
+    
+    var nome: String = ""
+    var cpf: String = ""
+    var saldo: Double = 0.0
+    var token: String = ""
+    
+}
