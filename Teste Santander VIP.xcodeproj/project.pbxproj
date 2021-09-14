@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA10567126F13BC8008F6590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10567026F13BC8008F6590 /* AppDelegate.swift */; };
+		BA10567326F13BC8008F6590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10567226F13BC8008F6590 /* SceneDelegate.swift */; };
+		BA10567526F13BC8008F6590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10567426F13BC8008F6590 /* ViewController.swift */; };
+		BA10567826F13BC8008F6590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA10567626F13BC8008F6590 /* Main.storyboard */; };
+		BA10567A26F13BCA008F6590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA10567926F13BCA008F6590 /* Assets.xcassets */; };
+		BA10567D26F13BCA008F6590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA10567B26F13BCA008F6590 /* LaunchScreen.storyboard */; };
+		BA10568826F13BCB008F6590 /* Teste_Santander_VIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10568726F13BCB008F6590 /* Teste_Santander_VIPTests.swift */; };
+		BA10569326F13BCB008F6590 /* Teste_Santander_VIPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10569226F13BCB008F6590 /* Teste_Santander_VIPUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA10568426F13BCB008F6590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA10566526F13BC7008F6590 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA10566C26F13BC8008F6590;
+			remoteInfo = "Teste Santander VIP";
+		};
+		BA10568F26F13BCB008F6590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA10566526F13BC7008F6590 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA10566C26F13BC8008F6590;
+			remoteInfo = "Teste Santander VIP";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA10566D26F13BC8008F6590 /* Teste Santander VIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teste Santander VIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA10567026F13BC8008F6590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA10567226F13BC8008F6590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BA10567426F13BC8008F6590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA10567726F13BC8008F6590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA10567926F13BCA008F6590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA10567C26F13BCA008F6590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA10567E26F13BCA008F6590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA10568326F13BCB008F6590 /* Teste Santander VIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Teste Santander VIPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA10568726F13BCB008F6590 /* Teste_Santander_VIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teste_Santander_VIPTests.swift; sourceTree = "<group>"; };
+		BA10568926F13BCB008F6590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA10568E26F13BCB008F6590 /* Teste Santander VIPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Teste Santander VIPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA10569226F13BCB008F6590 /* Teste_Santander_VIPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teste_Santander_VIPUITests.swift; sourceTree = "<group>"; };
+		BA10569426F13BCB008F6590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA10566A26F13BC8008F6590 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA10568026F13BCB008F6590 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA10568B26F13BCB008F6590 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA10566426F13BC7008F6590 = {
+			isa = PBXGroup;
+			children = (
+				BA10566F26F13BC8008F6590 /* Teste Santander VIP */,
+				BA10568626F13BCB008F6590 /* Teste Santander VIPTests */,
+				BA10569126F13BCB008F6590 /* Teste Santander VIPUITests */,
+				BA10566E26F13BC8008F6590 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA10566E26F13BC8008F6590 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA10566D26F13BC8008F6590 /* Teste Santander VIP.app */,
+				BA10568326F13BCB008F6590 /* Teste Santander VIPTests.xctest */,
+				BA10568E26F13BCB008F6590 /* Teste Santander VIPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA10566F26F13BC8008F6590 /* Teste Santander VIP */ = {
+			isa = PBXGroup;
+			children = (
+				BA10567026F13BC8008F6590 /* AppDelegate.swift */,
+				BA10567226F13BC8008F6590 /* SceneDelegate.swift */,
+				BA10567426F13BC8008F6590 /* ViewController.swift */,
+				BA10567626F13BC8008F6590 /* Main.storyboard */,
+				BA10567926F13BCA008F6590 /* Assets.xcassets */,
+				BA10567B26F13BCA008F6590 /* LaunchScreen.storyboard */,
+				BA10567E26F13BCA008F6590 /* Info.plist */,
+			);
+			path = "Teste Santander VIP";
+			sourceTree = "<group>";
+		};
+		BA10568626F13BCB008F6590 /* Teste Santander VIPTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA10568726F13BCB008F6590 /* Teste_Santander_VIPTests.swift */,
+				BA10568926F13BCB008F6590 /* Info.plist */,
+			);
+			path = "Teste Santander VIPTests";
+			sourceTree = "<group>";
+		};
+		BA10569126F13BCB008F6590 /* Teste Santander VIPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA10569226F13BCB008F6590 /* Teste_Santander_VIPUITests.swift */,
+				BA10569426F13BCB008F6590 /* Info.plist */,
+			);
+			path = "Teste Santander VIPUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA10566C26F13BC8008F6590 /* Teste Santander VIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA10569726F13BCB008F6590 /* Build configuration list for PBXNativeTarget "Teste Santander VIP" */;
+			buildPhases = (
+				BA10566926F13BC8008F6590 /* Sources */,
+				BA10566A26F13BC8008F6590 /* Frameworks */,
+				BA10566B26F13BC8008F6590 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Teste Santander VIP";
+			productName = "Teste Santander VIP";
+			productReference = BA10566D26F13BC8008F6590 /* Teste Santander VIP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA10568226F13BCB008F6590 /* Teste Santander VIPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA10569A26F13BCB008F6590 /* Build configuration list for PBXNativeTarget "Teste Santander VIPTests" */;
+			buildPhases = (
+				BA10567F26F13BCB008F6590 /* Sources */,
+				BA10568026F13BCB008F6590 /* Frameworks */,
+				BA10568126F13BCB008F6590 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA10568526F13BCB008F6590 /* PBXTargetDependency */,
+			);
+			name = "Teste Santander VIPTests";
+			productName = "Teste Santander VIPTests";
+			productReference = BA10568326F13BCB008F6590 /* Teste Santander VIPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA10568D26F13BCB008F6590 /* Teste Santander VIPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA10569D26F13BCB008F6590 /* Build configuration list for PBXNativeTarget "Teste Santander VIPUITests" */;
+			buildPhases = (
+				BA10568A26F13BCB008F6590 /* Sources */,
+				BA10568B26F13BCB008F6590 /* Frameworks */,
+				BA10568C26F13BCB008F6590 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA10569026F13BCB008F6590 /* PBXTargetDependency */,
+			);
+			name = "Teste Santander VIPUITests";
+			productName = "Teste Santander VIPUITests";
+			productReference = BA10568E26F13BCB008F6590 /* Teste Santander VIPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA10566526F13BC7008F6590 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					BA10566C26F13BC8008F6590 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					BA10568226F13BCB008F6590 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = BA10566C26F13BC8008F6590;
+					};
+					BA10568D26F13BCB008F6590 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = BA10566C26F13BC8008F6590;
+					};
+				};
+			};
+			buildConfigurationList = BA10566826F13BC7008F6590 /* Build configuration list for PBXProject "Teste Santander VIP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA10566426F13BC7008F6590;
+			productRefGroup = BA10566E26F13BC8008F6590 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA10566C26F13BC8008F6590 /* Teste Santander VIP */,
+				BA10568226F13BCB008F6590 /* Teste Santander VIPTests */,
+				BA10568D26F13BCB008F6590 /* Teste Santander VIPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA10566B26F13BC8008F6590 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA10567D26F13BCA008F6590 /* LaunchScreen.storyboard in Resources */,
+				BA10567A26F13BCA008F6590 /* Assets.xcassets in Resources */,
+				BA10567826F13BC8008F6590 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA10568126F13BCB008F6590 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA10568C26F13BCB008F6590 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA10566926F13BC8008F6590 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA10567526F13BC8008F6590 /* ViewController.swift in Sources */,
+				BA10567126F13BC8008F6590 /* AppDelegate.swift in Sources */,
+				BA10567326F13BC8008F6590 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA10567F26F13BCB008F6590 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA10568826F13BCB008F6590 /* Teste_Santander_VIPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA10568A26F13BCB008F6590 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA10569326F13BCB008F6590 /* Teste_Santander_VIPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA10568526F13BCB008F6590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA10566C26F13BC8008F6590 /* Teste Santander VIP */;
+			targetProxy = BA10568426F13BCB008F6590 /* PBXContainerItemProxy */;
+		};
+		BA10569026F13BCB008F6590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA10566C26F13BC8008F6590 /* Teste Santander VIP */;
+			targetProxy = BA10568F26F13BCB008F6590 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA10567626F13BC8008F6590 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA10567726F13BC8008F6590 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA10567B26F13BCA008F6590 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA10567C26F13BCA008F6590 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA10569526F13BCB008F6590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA10569626F13BCB008F6590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA10569826F13BCB008F6590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Teste Santander VIP/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipe.Teste-Santander-VIP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA10569926F13BCB008F6590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Teste Santander VIP/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipe.Teste-Santander-VIP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA10569B26F13BCB008F6590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Teste Santander VIPTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipe.Teste-Santander-VIPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teste Santander VIP.app/Teste Santander VIP";
+			};
+			name = Debug;
+		};
+		BA10569C26F13BCB008F6590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Teste Santander VIPTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipe.Teste-Santander-VIPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teste Santander VIP.app/Teste Santander VIP";
+			};
+			name = Release;
+		};
+		BA10569E26F13BCB008F6590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Teste Santander VIPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipe.Teste-Santander-VIPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Teste Santander VIP";
+			};
+			name = Debug;
+		};
+		BA10569F26F13BCB008F6590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Teste Santander VIPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipe.Teste-Santander-VIPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Teste Santander VIP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA10566826F13BC7008F6590 /* Build configuration list for PBXProject "Teste Santander VIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA10569526F13BCB008F6590 /* Debug */,
+				BA10569626F13BCB008F6590 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA10569726F13BCB008F6590 /* Build configuration list for PBXNativeTarget "Teste Santander VIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA10569826F13BCB008F6590 /* Debug */,
+				BA10569926F13BCB008F6590 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA10569A26F13BCB008F6590 /* Build configuration list for PBXNativeTarget "Teste Santander VIPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA10569B26F13BCB008F6590 /* Debug */,
+				BA10569C26F13BCB008F6590 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA10569D26F13BCB008F6590 /* Build configuration list for PBXNativeTarget "Teste Santander VIPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA10569E26F13BCB008F6590 /* Debug */,
+				BA10569F26F13BCB008F6590 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA10566526F13BC7008F6590 /* Project object */;
+}
