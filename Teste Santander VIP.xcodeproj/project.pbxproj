@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,7 @@
 		BA1056BB26F14415008F6590 /* AppTypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1056BA26F14415008F6590 /* AppTypeAlias.swift */; };
 		BA1056BE26F145BD008F6590 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1056BD26F145BD008F6590 /* APIConstants.swift */; };
 		BA1056C026F146DE008F6590 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1056BF26F146DE008F6590 /* APIRequest.swift */; };
+		BA1056C226F23803008F6590 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1056C126F23803008F6590 /* LoginRouter.swift */; };
 		C3AE4EFAD6D770AA7450471B /* Pods_Teste_Santander_VIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0383184C3352428B325467 /* Pods_Teste_Santander_VIP.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		BA1056BA26F14415008F6590 /* AppTypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTypeAlias.swift; sourceTree = "<group>"; };
 		BA1056BD26F145BD008F6590 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		BA1056BF26F146DE008F6590 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		BA1056C126F23803008F6590 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		DC68FBC65C3FC49D12577CF4 /* Pods_Teste_Santander_VIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teste_Santander_VIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0383184C3352428B325467 /* Pods_Teste_Santander_VIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teste_Santander_VIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,7 +137,6 @@
 				79AF4860E6F93E7EE3341397 /* Pods-Teste Santander VIPTests.debug.xcconfig */,
 				41BCBB6AD31140B501BD791F /* Pods-Teste Santander VIPTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,6 +212,12 @@
 			isa = PBXGroup;
 			children = (
 				BA1056A226F13DE3008F6590 /* View */,
+				BA10567426F13BC8008F6590 /* LoginViewController.swift */,
+				BA1056A326F13DF7008F6590 /* LoginModels.swift */,
+				BA1056A826F13FD4008F6590 /* LoginInteractor.swift */,
+				BA1056AA26F1407A008F6590 /* LoginPresenter.swift */,
+				BA1056AC26F1419F008F6590 /* LoginWorker.swift */,
+				BA1056C126F23803008F6590 /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -218,11 +225,6 @@
 		BA1056A226F13DE3008F6590 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BA10567426F13BC8008F6590 /* LoginViewController.swift */,
-				BA1056A326F13DF7008F6590 /* LoginModels.swift */,
-				BA1056A826F13FD4008F6590 /* LoginInteractor.swift */,
-				BA1056AA26F1407A008F6590 /* LoginPresenter.swift */,
-				BA1056AC26F1419F008F6590 /* LoginWorker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,6 +523,7 @@
 				BA1056BB26F14415008F6590 /* AppTypeAlias.swift in Sources */,
 				BA10567526F13BC8008F6590 /* LoginViewController.swift in Sources */,
 				BA1056AB26F1407A008F6590 /* LoginPresenter.swift in Sources */,
+				BA1056C226F23803008F6590 /* LoginRouter.swift in Sources */,
 				BA1056A926F13FD4008F6590 /* LoginInteractor.swift in Sources */,
 				BA1056A426F13DF7008F6590 /* LoginModels.swift in Sources */,
 				BA1056BE26F145BD008F6590 /* APIConstants.swift in Sources */,
@@ -708,7 +711,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Teste Santander VIP/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -728,7 +731,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Teste Santander VIP/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

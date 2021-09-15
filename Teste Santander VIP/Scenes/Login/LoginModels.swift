@@ -10,8 +10,10 @@ import UIKit
 enum Login{
     enum Something{
         struct Request {
+            let login: String
+            let senha: String
         }
-        struct response {
+        struct Response {
             let login: LoginModel
         }
         struct ViewModel {

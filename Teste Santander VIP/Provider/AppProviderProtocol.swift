@@ -8,5 +8,5 @@
 import UIKit
 
 protocol AppProviderProtocol {
-    func list(completion: @escaping APIResultParse)
+    func list(request: Login.Something.Request, completion: @escaping APIResultParse)
 }
