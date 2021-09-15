@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     
     var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
+    var loginResult: LoginModel!
     
     @IBOutlet weak var tfUsuario: UITextField!
     @IBOutlet weak var tfSenha: UITextField!
@@ -46,7 +47,8 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     
     
     func displaySomething(viewModel: Login.Something.ViewModel) {
-
+        loginResult = viewModel.login
+        
     }
     
 
@@ -63,9 +65,23 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
         let requestLogin = Login.Something.Request(login: usuario, senha: senha)
         print("Log requestLogin: \(requestLogin)")
         interactor?.doSomething(request: requestLogin)
-        
+
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let scene = segue.identifier{
+            if scene == "segueHome" {
+                let homeViewController = segue.destination as! HomeViewController
+                homeViewController.dadosUsuario = loginResult
+            }
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
+        
+    }
     
 }
 

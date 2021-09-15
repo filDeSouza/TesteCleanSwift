@@ -9,9 +9,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var dadosUsuario: LoginModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("print na tela de extrato: " + dadosUsuario.nome)
+        
         // Do any additional setup after loading the view.
     }
     
