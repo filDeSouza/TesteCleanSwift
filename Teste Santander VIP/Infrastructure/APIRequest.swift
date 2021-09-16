@@ -6,10 +6,9 @@
 //
 
 import Foundation
-import Alamofire
 import UIKit
 
-enum LoginError {
+enum ApiError {
     case url
     case taskError(error: Error)
     case noResponse
@@ -29,7 +28,7 @@ class APIRequest{
     
     private static let session = URLSession(configuration: configuration)
     
-    class func login(url: String, login: String, senha: String, completion: @escaping APIResultParse, onError: @escaping(LoginError) -> Void){
+    class func login(url: String, login: String, senha: String, completion: @escaping (LoginModel?) -> Void, onError: @escaping(ApiError) -> Void){
         
         let urlString = url + "/login"
         
@@ -69,7 +68,10 @@ class APIRequest{
                         usuario.token = (json["token"] as! String)
                         usuario.saldo = (json["saldo"] as! NSNumber).doubleValue
                     }
+                    
                     completion(usuario)
+                    
+                    
                 }catch{
                     print(error.localizedDescription)
                     onError(.invalidJSON)
@@ -78,25 +80,50 @@ class APIRequest{
             
         })
         dataTask.resume()
-//
-//        let urlRequest = url + "/login"
-//        let parametros = [
-//            "username": login,
-//            "password": senha]
-//        let parametrosRequisicaoLogin = try? JSONEncoder().encode(parametros)
-//        let metodo: HTTPMethod = .post
-//
-//        AF.request(urlRequest, method: metodo, parameters: parametrosRequisicaoLogin, encoder: JSONEncoding()).responseJSON(completionHandler: {
-//            (result) in
-//                if let dataReturn = result.value{
-//                    (completion(dataReturn as! LoginModel))
-//                }
-//    })
-//
         
-        
-        
-
     }
     
+    class func obtemExtrato(url: String, token: String, completion: @escaping ([ExtratoModel]?) -> Void, onError: @escaping(ApiError) -> Void){
+        
+        let urlString = url + "/extrato"
+        
+        guard let url = URL(string: urlString)else{
+            onError(.url)
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue(token, forHTTPHeaderField: "token")
+        
+        let dataTask = session.dataTask(with: request, completionHandler: { data, response, error in
+            
+            if error != nil{
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else{
+                onError(.noResponse)
+                return
+            }
+            
+            if response.statusCode == 200 {
+                print(response)
+                guard let data = data else{return}
+                do{
+                    
+                    let extrato = try JSONDecoder().decode([ExtratoModel].self, from: data)
+                    
+                    completion(extrato)
+                }catch{
+                    print(error.localizedDescription)
+                    onError(.invalidJSON)
+                }
+            }else{
+                print("Erro no REST")
+            }
+            
+        })
+        dataTask.resume()
+    }
 }

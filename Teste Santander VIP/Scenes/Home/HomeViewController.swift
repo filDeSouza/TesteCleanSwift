@@ -7,27 +7,71 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+protocol HomeDisplayLogic: class {
+    func displayExtrato(viewModel: Home.Acao.ViewModel)
+}
 
-    var dadosUsuario: LoginModel!
+class HomeViewController: UIViewController, HomeDisplayLogic {
+
+    var dadosUsuario: LoginModel?
+    var dadosExtrato: [ExtratoModel] = []
+    var interactor: HomeBusinessLogic?
+    var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
+    
+    @IBOutlet weak var labelNome: UILabel!
+    @IBOutlet weak var labelDocumento: UILabel!
+    @IBOutlet weak var labelSaldo: UILabel!
+    @IBOutlet weak var tableViewExtrato: UITableView!
+    
+    private func setup(){
+        let viewController = self
+        let interactor = HomeInteractor()
+        let presenter = HomePresenter()
+        let router = HomeRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("print na tela de extrato: " + dadosUsuario.nome)
         
-        // Do any additional setup after loading the view.
+        guard let dadosUsuarioRecuperados = dadosUsuario else{return}
+        print("print na tela de extrato: " + dadosUsuarioRecuperados.nome)
+        
+    }
+    
+    func displayExtrato(viewModel: Home.Acao.ViewModel) {
+        dadosExtrato = viewModel.extrato
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btLogout(_ sender: Any) {
     }
-    */
+    
+}
 
+extension HomeViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+                
+        return dadosExtrato.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellExtrato", for: indexPath) as! ExtratoTableViewCell
+        let extrato = dadosExtrato[indexPath.row]
+        cell.popularCelula(extrato: extrato)
+        return cell
+        
+    }
+    
+    
+    
+    
 }

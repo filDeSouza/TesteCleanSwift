@@ -8,7 +8,7 @@
 import UIKit
 
 enum Login{
-    enum Something{
+    enum Acao{
         struct Request {
             let login: String
             let senha: String

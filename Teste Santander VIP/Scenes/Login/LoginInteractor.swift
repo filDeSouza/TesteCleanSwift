@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginBusinessLogic {
-    func doSomething(request: Login.Something.Request)
+    func realizaLogin(request: Login.Acao.Request)
     var login: LoginModel?{get set}
 }
 
@@ -22,11 +22,18 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore{
     var worker: LoginWorker?
     var login: LoginModel?
     
-    func doSomething(request: Login.Something.Request) {
-        worker = LoginWorker()
+    func realizaLogin(request: Login.Acao.Request) {
+        //worker = LoginWorker()
         worker?.fetchLogin(request: request, completion: {(result) in
-            let response = Login.Something.Response(login: result)
+            
+            guard let resultado = result else {return}
+            
+            let response = Login.Acao.Response(login: resultado)
+                            
+            // MARK: Chama o Presenter
             self.presenter?.presentSomething(response: response)
+            
+
         })
     }
     

@@ -13,8 +13,8 @@ class LoginWorker{
         
     }
     
-    func fetchLogin(request: Login.Something.Request, completion: @escaping(LoginModel) -> Void){
-        appManager.list(request: request, completion: {(result) in
+    func fetchLogin(request: Login.Acao.Request, completion: @escaping(LoginModel?) -> Void){
+        appManager.login(request: request, completion: {(result) in
             if result != nil {
                 completion(result)
             }else{

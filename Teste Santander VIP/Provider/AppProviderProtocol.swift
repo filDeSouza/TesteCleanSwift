@@ -7,6 +7,10 @@
 
 import UIKit
 
-protocol AppProviderProtocol {
-    func list(request: Login.Something.Request, completion: @escaping APIResultParse)
+protocol LoginProviderProtocol {
+    func login(request: Login.Acao.Request, completion: @escaping (LoginModel?) -> Void)
+}
+
+protocol ExtratoProviderProtocol {
+    func obterExtrato(request: Home.Acao.Request, completion: @escaping ([ExtratoModel]?) -> Void)
 }

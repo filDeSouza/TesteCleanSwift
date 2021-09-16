@@ -7,4 +7,6 @@
 
 import Foundation
 
-typealias APIResultParse = (LoginModel) -> ()
+//typealias LoginAPIResultParse = (LoginModel?) -> ()
+
+//typealias ExtratoAPIResultParse = ([ExtratoModel]) -> ()

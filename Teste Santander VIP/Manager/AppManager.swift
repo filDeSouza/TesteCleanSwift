@@ -10,13 +10,25 @@ import UIKit
 class AppManager{
     let appBusiness = AppBusiness()
     
-    func list(request: Login.Something.Request, completion: @escaping APIResultParse){
-        appBusiness.list(request: request, completion: {(result) in
+    func login(request: Login.Acao.Request, completion: @escaping (LoginModel?) -> Void){
+        appBusiness.login(request: request, completion: {(result) in
             if result != nil{
                 completion(result)
             }else{
                 
             }
+        })
+    }
+    
+    func obtemExtrato(request: Home.Acao.Request, completion: @escaping ([ExtratoModel]?) -> Void){
+        appBusiness.obtemExtrato(request: request, completion: {(result) in
+            
+            if result != nil{
+                completion(result)
+            }else{
+                return
+            }
+            
         })
     }
 }

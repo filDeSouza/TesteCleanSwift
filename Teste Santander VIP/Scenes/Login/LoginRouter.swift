@@ -27,26 +27,26 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing{
       if let segue = segue {
         let destinationVC = segue.destination as! HomeViewController
         var destinationDS = destinationVC.router!.dataStore!
-        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+        passDataToHomeDataStore(source: dataStore!, destination: &destinationDS)
       } else {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "segueHome") as! HomeViewController
         var destinationDS = destinationVC.router!.dataStore!
-        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-        navigateToSomewhere(source: viewController!, destination: destinationVC)
+        passDataToHomeDataStore(source: dataStore!, destination: &destinationDS)
+        navigateToHomeViewController(source: viewController!, destination: destinationVC)
       }
     }
 
     // MARK: Navigation
     
-    func navigateToSomewhere(source: LoginViewController, destination: HomeViewController)
+    func navigateToHomeViewController(source: LoginViewController, destination: HomeViewController)
     {
       source.show(destination, sender: nil)
     }
     
     // MARK: Passing data
     
-    func passDataToSomewhere(source: LoginDataStore, destination: inout HomeViewController)
+    func passDataToHomeDataStore(source: LoginDataStore, destination: inout HomeDataStore)
     {
       //destination.name = source.name
         print("Teste")

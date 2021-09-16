@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginDisplayLogic: AnyObject {
-    func displaySomething(viewModel: Login.Something.ViewModel)
+    func displaySomething(viewModel: Login.Acao.ViewModel)
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic {
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     }
     
     
-    func displaySomething(viewModel: Login.Something.ViewModel) {
+    func displaySomething(viewModel: Login.Acao.ViewModel) {
         loginResult = viewModel.login
         
     }
@@ -62,9 +62,9 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
         
         guard let usuario = self.tfUsuario.text else {return}
         guard let senha = self.tfSenha.text else {return}
-        let requestLogin = Login.Something.Request(login: usuario, senha: senha)
+        let requestLogin = Login.Acao.Request(login: usuario, senha: senha)
         print("Log requestLogin: \(requestLogin)")
-        interactor?.doSomething(request: requestLogin)
+        interactor?.realizaLogin(request: requestLogin)
 
     }
     

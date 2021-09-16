@@ -8,15 +8,17 @@
 import UIKit
 
 protocol LoginPresentationLogic{
-    func presentSomething(response: Login.Something.Response)
+    func presentSomething(response: Login.Acao.Response)
 }
 
 class LoginPresenter: LoginPresentationLogic{
     
     weak var viewController: LoginDisplayLogic?
     
-    func presentSomething(response: Login.Something.Response) {
-        let viewModel = Login.Something.ViewModel(login: response.login)
+    func presentSomething(response: Login.Acao.Response) {
+        let viewModel = Login.Acao.ViewModel(login: response.login)
+        
+        // MARK: Retorna para a View o valor do response
         viewController?.displaySomething(viewModel: viewModel)
         
     }
