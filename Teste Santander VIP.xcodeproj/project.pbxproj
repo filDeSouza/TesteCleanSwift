@@ -237,9 +237,9 @@
 			isa = PBXGroup;
 			children = (
 				BA10567426F13BC8008F6590 /* LoginViewController.swift */,
-				BA1056A326F13DF7008F6590 /* LoginModels.swift */,
 				BA1056A826F13FD4008F6590 /* LoginInteractor.swift */,
 				BA1056AA26F1407A008F6590 /* LoginPresenter.swift */,
+				BA1056A326F13DF7008F6590 /* LoginModels.swift */,
 				BA1056AC26F1419F008F6590 /* LoginWorker.swift */,
 				BA1056C126F23803008F6590 /* LoginRouter.swift */,
 			);
@@ -302,8 +302,8 @@
 			children = (
 				3B08DE4026F3E66400828169 /* View */,
 				BA1056C426F2895B008F6590 /* HomeViewController.swift */,
-				3B08DE1C26F3A81C00828169 /* HomeModels.swift */,
 				3B08DE2626F3B81A00828169 /* HomeInteractor.swift */,
+				3B08DE1C26F3A81C00828169 /* HomeModels.swift */,
 				3B08DE2B26F3BF8200828169 /* HomePresenter.swift */,
 				3B08DE3026F3C11900828169 /* HomeWorker.swift */,
 				3B08DE3B26F3DC6E00828169 /* HomeRouter.swift */,

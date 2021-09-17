@@ -12,5 +12,5 @@ protocol LoginProviderProtocol {
 }
 
 protocol ExtratoProviderProtocol {
-    func obterExtrato(request: Home.Acao.Request, completion: @escaping ([ExtratoModel]?) -> Void)
+    func obterExtrato(token: String, completion: @escaping ([ExtratoModel]?) -> Void)
 }

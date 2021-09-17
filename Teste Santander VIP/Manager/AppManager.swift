@@ -20,8 +20,8 @@ class AppManager{
         })
     }
     
-    func obtemExtrato(request: Home.Acao.Request, completion: @escaping ([ExtratoModel]?) -> Void){
-        appBusiness.obtemExtrato(request: request, completion: {(result) in
+    func obtemExtrato(token: String, completion: @escaping ([ExtratoModel]?) -> Void){
+        appBusiness.obtemExtrato(token: token, completion: {(result) in
             
             if result != nil{
                 completion(result)
@@ -30,5 +30,9 @@ class AppManager{
             }
             
         })
+    }
+    
+    func obtemUsuario(request: Login.Acao.ViewModel){
+        
     }
 }

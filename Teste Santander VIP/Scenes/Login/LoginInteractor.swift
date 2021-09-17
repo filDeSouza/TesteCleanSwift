@@ -23,14 +23,14 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore{
     var login: LoginModel?
     
     func realizaLogin(request: Login.Acao.Request) {
-        //worker = LoginWorker()
+        worker = LoginWorker()
         worker?.fetchLogin(request: request, completion: {(result) in
             
             guard let resultado = result else {return}
             
             let response = Login.Acao.Response(login: resultado)
-                            
-            // MARK: Chama o Presenter
+            self.login = response.login
+            // MARK: - Chama o Presenter
             self.presenter?.presentSomething(response: response)
             
 

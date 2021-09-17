@@ -20,7 +20,7 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing{
     weak var viewController: LoginViewController?
     var dataStore: LoginDataStore?
 
-    // MARK: Routing
+    // MARK: - Routing
     
     func routeToHome(segue: UIStoryboardSegue?)
     {
@@ -30,25 +30,25 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing{
         passDataToHomeDataStore(source: dataStore!, destination: &destinationDS)
       } else {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "segueHome") as! HomeViewController
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         var destinationDS = destinationVC.router!.dataStore!
         passDataToHomeDataStore(source: dataStore!, destination: &destinationDS)
         navigateToHomeViewController(source: viewController!, destination: destinationVC)
       }
     }
 
-    // MARK: Navigation
+    // MARK: - Navigation
     
     func navigateToHomeViewController(source: LoginViewController, destination: HomeViewController)
     {
       source.show(destination, sender: nil)
     }
     
-    // MARK: Passing data
+    // MARK: - Passing data
     
     func passDataToHomeDataStore(source: LoginDataStore, destination: inout HomeDataStore)
     {
-      //destination.name = source.name
+        destination.login = source.login
         print("Teste")
     }
     

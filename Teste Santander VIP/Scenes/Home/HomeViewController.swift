@@ -7,12 +7,14 @@
 
 import UIKit
 
-protocol HomeDisplayLogic: class {
+protocol HomeDisplayLogic {
     func displayExtrato(viewModel: Home.Acao.ViewModel)
+    func displayUsuario(usuario: Home.ObtemUsuario.ViewModel)
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
 
+    
     var dadosUsuario: LoginModel?
     var dadosExtrato: [ExtratoModel] = []
     var interactor: HomeBusinessLogic?
@@ -22,6 +24,38 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     @IBOutlet weak var labelDocumento: UILabel!
     @IBOutlet weak var labelSaldo: UILabel!
     @IBOutlet weak var tableViewExtrato: UITableView!
+    
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+      super.init(coder: aDecoder)
+      setup()
+    }
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableViewExtrato.dataSource = self
+        self.tableViewExtrato.delegate = self
+        setupUsuario()
+        obtemExtrato()
+    }
+    
+    func setupUsuario() {
+        interactor?.homeObtemUsuario(request: Home.ObtemUsuario.Request())
+    }
+    
+    func obtemExtrato() {
+        interactor?.homeRealizaRequest(request: Home.Acao.Request())
+    }
+    
+    func displayExtrato(viewModel: Home.Acao.ViewModel) {
+        DispatchQueue.main.async {
+            self.dadosExtrato = viewModel.extrato
+            self.tableViewExtrato.reloadData()
+        }
+    }
+    
     
     private func setup(){
         let viewController = self
@@ -37,25 +71,23 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        guard let dadosUsuarioRecuperados = dadosUsuario else{return}
-        print("print na tela de extrato: " + dadosUsuarioRecuperados.nome)
-        
+    func displayUsuario(usuario: Home.ObtemUsuario.ViewModel) {
+        DispatchQueue.main.async {
+            self.labelNome.text = usuario.usuario.nome
+            self.labelDocumento.text = usuario.usuario.cpf
+            self.labelSaldo.text = "R$ \(usuario.usuario.saldo)"
+        }
     }
-    
-    func displayExtrato(viewModel: Home.Acao.ViewModel) {
-        dadosExtrato = viewModel.extrato
-    }
-    
 
     @IBAction func btLogout(_ sender: Any) {
+        
+        router?.realizaLogout()
+        
     }
     
 }
 
-extension HomeViewController: UITableViewDataSource{
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                 
@@ -70,8 +102,5 @@ extension HomeViewController: UITableViewDataSource{
         return cell
         
     }
-    
-    
-    
     
 }

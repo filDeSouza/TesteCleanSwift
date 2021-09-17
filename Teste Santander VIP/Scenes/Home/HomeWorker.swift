@@ -11,8 +11,8 @@ class HomeWorker{
     
     let appManager = AppManager()
     
-    func fetchExtrato(request: Home.Acao.Request, completion: @escaping([ExtratoModel]?) -> Void){
-        appManager.obtemExtrato(request: request, completion: {(result) in
+    func fetchExtrato(token: String, completion: @escaping([ExtratoModel]?) -> Void){
+        appManager.obtemExtrato(token: token, completion: {(result) in
             
             if result != nil{
                 completion(result)

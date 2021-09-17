@@ -26,14 +26,14 @@ class AppBusiness{
         })
     }
     
-    func obtemExtrato(request: Home.Acao.Request, completion: @escaping ([ExtratoModel]?) -> Void){
+    func obtemExtrato(token: String, completion: @escaping ([ExtratoModel]?) -> Void){
         
-        provider.obterExtrato(request: request, completion: { (result) in
+        provider.obterExtrato(token: token, completion: { (result) in
             
             if result != nil{
                 do{
-                    let login = result
-                    completion(login)
+                    let extrato = result
+                    completion(extrato)
                 }catch{
                     
                 }

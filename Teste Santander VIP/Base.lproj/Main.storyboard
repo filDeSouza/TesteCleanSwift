@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qn9-aE-o4L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qn9-aE-o4L">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,19 +12,19 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Teste_Santander_VIP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Teste_Santander_VIP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Xk-Rb-TAL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBY-aO-JUc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="182.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_solutis" translatesAutoresizingMaskIntoConstraints="NO" id="Wfo-4O-gyE">
-                                                <rect key="frame" x="40" y="67" width="240" height="91"/>
+                                                <rect key="frame" x="40" y="60" width="240" height="91"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,7 +35,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ery-fL-Di7">
-                                        <rect key="frame" x="0.0" y="189.5" width="320" height="189"/>
+                                        <rect key="frame" x="0.0" y="182.5" width="320" height="183"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="teste@teste.com.br" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-gq-V5R">
                                                 <rect key="frame" x="17" y="39" width="286" height="34"/>
@@ -59,7 +59,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8K-mq-4M5">
-                                        <rect key="frame" x="0.0" y="378.5" width="320" height="189.5"/>
+                                        <rect key="frame" x="0.0" y="365.5" width="320" height="182.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaY-cJ-YjY">
                                                 <rect key="frame" x="75" y="18" width="171" height="57"/>
@@ -120,13 +120,13 @@
         <!--Home View Controller-->
         <scene sceneID="QSS-bO-mps">
             <objects>
-                <viewController storyboardIdentifier="segueHome" id="M7c-my-omQ" customClass="HomeViewController" customModule="Teste_Santander_VIP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="M7c-my-omQ" customClass="HomeViewController" customModule="Teste_Santander_VIP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSt-H6-rc8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pj5-m0-zYl">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LL0-ks-56B">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="340"/>
@@ -247,11 +247,11 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZaG-Xk-QAe">
-                                        <rect key="frame" x="0.0" y="340" width="320" height="228"/>
+                                        <rect key="frame" x="0.0" y="340" width="320" height="208"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellExtrato" rowHeight="127" id="hR1-ne-sIH" customClass="ExtratoTableViewCell" customModule="Teste_Santander_VIP" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="127"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="320" height="127"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hR1-ne-sIH" id="Mfm-LD-mc4">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
@@ -420,6 +420,7 @@
                         <outlet property="labelNome" destination="abI-ZS-e0N" id="Nq9-WB-9tq"/>
                         <outlet property="labelSaldo" destination="2Gz-k3-04s" id="AUd-LJ-D4V"/>
                         <outlet property="tableViewExtrato" destination="ZaG-Xk-QAe" id="Fn3-Q9-SjX"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueLogout" id="Uli-fC-yHu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFd-G3-wdg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -443,6 +444,9 @@
             <point key="canvasLocation" x="-841" y="64"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Uli-fC-yHu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_logout" width="26" height="26"/>
         <image name="logo_solutis" width="401" height="91"/>

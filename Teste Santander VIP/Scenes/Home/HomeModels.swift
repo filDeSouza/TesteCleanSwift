@@ -10,13 +10,25 @@ import Foundation
 enum Home{
     enum Acao{
         struct Request {
-            let token: String
+            
         }
         struct Response {
             let extrato: [ExtratoModel]
         }
         struct ViewModel {
             let extrato: [ExtratoModel]
+        }
+    }
+    
+    enum ObtemUsuario{
+        struct Request{
+            
+        }
+        struct Response{
+            var usuario: LoginModel
+        }
+        struct ViewModel {
+            var usuario: LoginModel
         }
     }
 }

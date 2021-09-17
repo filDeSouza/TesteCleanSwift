@@ -9,32 +9,44 @@ import UIKit
 
 protocol HomeBusinessLogic{
     func homeRealizaRequest(request: Home.Acao.Request)
-    var extratoModel: ExtratoModel?{get set}
+    func homeObtemUsuario(request: Home.ObtemUsuario.Request)
 }
 
 protocol HomeDataStore {
-    var extratoModel: ExtratoModel?{get set}
+    var login: LoginModel? { get set }
+    var extratoModel: [ExtratoModel]?{ get }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
-
+        
     var presenter: HomePresentationLogic?
     var worker: HomeWorker?
-    var extratoModel: ExtratoModel?
+    var login: LoginModel?
+    var extratoModel: [ExtratoModel]?
     
     func homeRealizaRequest(request: Home.Acao.Request) {
         
-        worker?.fetchExtrato(request: request, completion: {(result) in
+        if let token = login?.token{
+            worker = HomeWorker()
+            worker?.fetchExtrato(token: token, completion: {(result) in
+                
+                guard let resultado = result else {return}
+                let response = Home.Acao.Response(extrato: resultado)
+                
+                self.presenter?.presentExtrato(response: response)
+                
+            })
             
-            guard let resultado = result else {return}
-            
-            let response = Home.Acao.Response(extrato: resultado)
-            
-            self.presenter?.presentExtrato(response: response)
-            
-        })
+        }
+        
+
         
     }
     
+    func homeObtemUsuario(request: Home.ObtemUsuario.Request){
+        
+        presenter?.presentUsuario(usuario: login!)
+        
+    }
     
 }

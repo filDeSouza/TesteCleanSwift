@@ -39,11 +39,11 @@ class AppProvider: LoginProviderProtocol{
     }
 }
 extension AppProvider: ExtratoProviderProtocol{
-    
-    func obterExtrato(request: Home.Acao.Request, completion: @escaping ([ExtratoModel]?) -> Void){
+        
+    func obterExtrato(token: String, completion: @escaping ([ExtratoModel]?) -> Void){
         
         let url = APIConstants.base_url
-        APIRequest.obtemExtrato(url: url, token: request.token, completion: {
+        APIRequest.obtemExtrato(url: url, token: token, completion: {
             (result) in
             
             if result != nil{

@@ -9,17 +9,22 @@ import UIKit
 
 protocol HomePresentationLogic {
     func presentExtrato(response: Home.Acao.Response)
+    func presentUsuario(usuario: LoginModel)
 }
 
 class HomePresenter: HomePresentationLogic{
-    
-    weak var viewController: HomeDisplayLogic?
+
+    var viewController: HomeDisplayLogic?
     
     func presentExtrato(response: Home.Acao.Response) {
         let viewModel = Home.Acao.ViewModel(extrato: response.extrato)
         
         // MARK: Retorna para a View o valor do response
         viewController?.displayExtrato(viewModel: viewModel)
+    }
+    
+    func presentUsuario(usuario: LoginModel){
+        viewController?.displayUsuario(usuario: Home.ObtemUsuario.ViewModel(usuario: usuario))
     }
     
 }

@@ -47,15 +47,17 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     
     
     func displaySomething(viewModel: Login.Acao.ViewModel) {
-        loginResult = viewModel.login
-        
+        DispatchQueue.main.async {
+            //self.loginResult = viewModel.login
+            self.router?.routeToHome(segue: nil)
+        }
+
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                
     }
     
     @IBAction func btLoginAction(_ sender: UIButton) {
@@ -68,20 +70,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let scene = segue.identifier{
-            if scene == "segueHome" {
-                let homeViewController = segue.destination as! HomeViewController
-                homeViewController.dadosUsuario = loginResult
-            }
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-        
-    }
+    
     
 }
 
