@@ -14,6 +14,10 @@
 		3B08DE3126F3C11900828169 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B08DE3026F3C11900828169 /* HomeWorker.swift */; };
 		3B08DE3C26F3DC6E00828169 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B08DE3B26F3DC6E00828169 /* HomeRouter.swift */; };
 		3B08DE4226F3E68E00828169 /* ExtratoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B08DE4126F3E68E00828169 /* ExtratoTableViewCell.swift */; };
+		3B5E3CF426F612D300ACA818 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E3CF326F612D200ACA818 /* Utils.swift */; };
+		3B5E3D4226F7B6A000ACA818 /* Santander Headline W05 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B5E3D4126F7B6A000ACA818 /* Santander Headline W05 Regular.ttf */; };
+		3B5E3D4726F7B7F400ACA818 /* Santander Text Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B5E3D4626F7B7F400ACA818 /* Santander Text Bold.ttf */; };
+		3B5E3D4C26F7B80100ACA818 /* Santander Logo Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B5E3D4B26F7B80100ACA818 /* Santander Logo Light.ttf */; };
 		789CDC888926AD6BE914291E /* Pods_Teste_Santander_VIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC68FBC65C3FC49D12577CF4 /* Pods_Teste_Santander_VIPTests.framework */; };
 		8F0123A7AFA81099B63F2D38 /* Pods_Teste_Santander_VIP_Teste_Santander_VIPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B842B703ECF09815BE2979F /* Pods_Teste_Santander_VIP_Teste_Santander_VIPUITests.framework */; };
 		BA10567126F13BC8008F6590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10567026F13BC8008F6590 /* AppDelegate.swift */; };
@@ -67,6 +71,10 @@
 		3B08DE3026F3C11900828169 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		3B08DE3B26F3DC6E00828169 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		3B08DE4126F3E68E00828169 /* ExtratoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtratoTableViewCell.swift; sourceTree = "<group>"; };
+		3B5E3CF326F612D200ACA818 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3B5E3D4126F7B6A000ACA818 /* Santander Headline W05 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Santander Headline W05 Regular.ttf"; sourceTree = "<group>"; };
+		3B5E3D4626F7B7F400ACA818 /* Santander Text Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Santander Text Bold.ttf"; sourceTree = "<group>"; };
+		3B5E3D4B26F7B80100ACA818 /* Santander Logo Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Santander Logo Light.ttf"; sourceTree = "<group>"; };
 		41BCBB6AD31140B501BD791F /* Pods-Teste Santander VIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teste Santander VIPTests.release.xcconfig"; path = "Target Support Files/Pods-Teste Santander VIPTests/Pods-Teste Santander VIPTests.release.xcconfig"; sourceTree = "<group>"; };
 		41FF14EE2A1B4EAB1040DB11 /* Pods-Teste Santander VIP-Teste Santander VIPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teste Santander VIP-Teste Santander VIPUITests.debug.xcconfig"; path = "Target Support Files/Pods-Teste Santander VIP-Teste Santander VIPUITests/Pods-Teste Santander VIP-Teste Santander VIPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C942DA159A8A0C95F66E42 /* Pods-Teste Santander VIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teste Santander VIP.release.xcconfig"; path = "Target Support Files/Pods-Teste Santander VIP/Pods-Teste Santander VIP.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +149,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3B5E3CF226F612B700ACA818 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3B5E3CF326F612D200ACA818 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3B5E3D4026F7B68200ACA818 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				3B5E3D4B26F7B80100ACA818 /* Santander Logo Light.ttf */,
+				3B5E3D4626F7B7F400ACA818 /* Santander Text Bold.ttf */,
+				3B5E3D4126F7B6A000ACA818 /* Santander Headline W05 Regular.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		3B5E3D5026F7C66A00ACA818 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA10567626F13BC8008F6590 /* Main.storyboard */,
+				BA10567B26F13BCA008F6590 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7BEE31585329D06B9BCFB8BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +224,9 @@
 		BA10566F26F13BC8008F6590 /* Teste Santander VIP */ = {
 			isa = PBXGroup;
 			children = (
+				3B5E3D5026F7C66A00ACA818 /* View */,
+				3B5E3D4026F7B68200ACA818 /* font */,
+				3B5E3CF226F612B700ACA818 /* Utils */,
 				BA1056BC26F144DD008F6590 /* Infrastructure */,
 				BA1056B926F142EE008F6590 /* TypeAlias */,
 				BA1056B426F1422E008F6590 /* Provider */,
@@ -198,9 +236,7 @@
 				BA1056A026F13DAA008F6590 /* Scenes */,
 				BA10567026F13BC8008F6590 /* AppDelegate.swift */,
 				BA10567226F13BC8008F6590 /* SceneDelegate.swift */,
-				BA10567626F13BC8008F6590 /* Main.storyboard */,
 				BA10567926F13BCA008F6590 /* Assets.xcassets */,
-				BA10567B26F13BCA008F6590 /* LaunchScreen.storyboard */,
 				BA10567E26F13BCA008F6590 /* Info.plist */,
 			);
 			path = "Teste Santander VIP";
@@ -420,7 +456,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA10567D26F13BCA008F6590 /* LaunchScreen.storyboard in Resources */,
+				3B5E3D4726F7B7F400ACA818 /* Santander Text Bold.ttf in Resources */,
 				BA10567A26F13BCA008F6590 /* Assets.xcassets in Resources */,
+				3B5E3D4C26F7B80100ACA818 /* Santander Logo Light.ttf in Resources */,
+				3B5E3D4226F7B6A000ACA818 /* Santander Headline W05 Regular.ttf in Resources */,
 				BA10567826F13BC8008F6590 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +593,7 @@
 				BA1056A726F13EB7008F6590 /* LoginModel.swift in Sources */,
 				BA1056B826F14292008F6590 /* AppProviderProtocol.swift in Sources */,
 				3B08DE3126F3C11900828169 /* HomeWorker.swift in Sources */,
+				3B5E3CF426F612D300ACA818 /* Utils.swift in Sources */,
 				3B08DE2726F3B81A00828169 /* HomeInteractor.swift in Sources */,
 				BA1056C526F2895B008F6590 /* HomeViewController.swift in Sources */,
 				3B08DE4226F3E68E00828169 /* ExtratoTableViewCell.swift in Sources */,

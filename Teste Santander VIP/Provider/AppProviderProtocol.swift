@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginProviderProtocol {
-    func login(request: Login.Acao.Request, completion: @escaping (LoginModel?) -> Void)
+    func login(request: Login.Acao.Request, completion: @escaping (LoginModel?) -> Void, onError: @escaping(ApiError) -> Void)
 }
 
 protocol ExtratoProviderProtocol {

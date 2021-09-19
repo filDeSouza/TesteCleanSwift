@@ -18,5 +18,10 @@ target 'Teste Santander VIP' do
 
 pod 'Alamofire'
 pod 'CryptoSwift'
+pod 'KeychainSwift', '~> 19.0'
+pod 'SVProgressHUD', '2.2.5'
+pod 'SDLoader'
+pod 'CPF-CNPJ-Validator'
+pod 'PasswordTextField'
 
 end

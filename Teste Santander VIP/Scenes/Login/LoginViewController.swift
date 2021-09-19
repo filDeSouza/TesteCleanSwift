@@ -6,19 +6,39 @@
 //
 
 import UIKit
+import SDLoader
+import KeychainSwift
 
 protocol LoginDisplayLogic: AnyObject {
-    func displaySomething(viewModel: Login.Acao.ViewModel)
+    func displayRouterHome(viewModel: Login.Acao.ViewModel)
+    func displayLoginErrorAlert()
+    func displayDadosVazios()
+    func displayLoginSenhaInvalidos()
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic {
+
     
+
     var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
     var loginResult: LoginModel!
+    let sdLoader = SDLoader()
+    let keyChain = KeychainSwift()
+
+    
     
     @IBOutlet weak var tfUsuario: UITextField!
     @IBOutlet weak var tfSenha: UITextField!
+    @IBOutlet weak var labelErro: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        labelErro.isHidden = true
+        if keyChain.get("usuario") != nil {
+            self.tfUsuario.text = keyChain.get("usuario")
+        }
+    }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
     {
@@ -46,22 +66,39 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     }
     
     
-    func displaySomething(viewModel: Login.Acao.ViewModel) {
+    func displayRouterHome(viewModel: Login.Acao.ViewModel) {
         DispatchQueue.main.async {
             //self.loginResult = viewModel.login
             self.router?.routeToHome(segue: nil)
         }
 
     }
-    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    func displayDadosVazios() {
+        labelErro.isHidden = false
+        self.labelErro.text = "Os campos login e senha devem ser preenchidos"
+        sdLoader.stopAnimation()
     }
     
+    func displayLoginErrorAlert() {
+        sdLoader.stopAnimation()
+        let alert = UIAlertController(title: "Aviso", message: "Sistema indisponivel no momento", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func displayLoginSenhaInvalidos() {
+        DispatchQueue.main.async {
+            self.labelErro.isHidden = false
+            self.labelErro.text = "Login ou senha inválidos"
+            self.sdLoader.stopAnimation()
+        }
+
+    }
+        
     @IBAction func btLoginAction(_ sender: UIButton) {
         
+        sdLoader.startAnimating(atView: self.view)
         guard let usuario = self.tfUsuario.text else {return}
         guard let senha = self.tfSenha.text else {return}
         let requestLogin = Login.Acao.Request(login: usuario, senha: senha)
@@ -70,6 +107,11 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
 
     }
     
+    @IBAction func sumirTeclado(_ sender: Any) {
+        
+        self.view.endEditing(true)
+        
+    }
     
     
 }

@@ -10,12 +10,25 @@ import UIKit
 class AppManager{
     let appBusiness = AppBusiness()
     
-    func login(request: Login.Acao.Request, completion: @escaping (LoginModel?) -> Void){
+    func login(request: Login.Acao.Request, completion: @escaping (LoginModel?) -> Void, onError: @escaping (ApiError) -> Void){
         appBusiness.login(request: request, completion: {(result) in
             if result != nil{
                 completion(result)
             }else{
                 
+            }
+        }, onError: {(error) in
+            switch error{
+            case .invalidJSON:
+                onError(.invalidJSON)
+            case .noData:
+                onError(.noData)
+            case .noResponse:
+                onError(.noResponse)
+            case .erroResposta:
+                onError(.erroResposta)
+            default:
+                print("Erro genérico")
             }
         })
     }

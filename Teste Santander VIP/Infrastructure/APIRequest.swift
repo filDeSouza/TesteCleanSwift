@@ -76,6 +76,8 @@ class APIRequest{
                     print(error.localizedDescription)
                     onError(.invalidJSON)
                 }
+            }else if response.statusCode == 401{
+                onError(.erroResposta)
             }
             
         })
@@ -119,6 +121,8 @@ class APIRequest{
                     print(error.localizedDescription)
                     onError(.invalidJSON)
                 }
+            }else if response.statusCode == 401{
+                onError(.erroResposta)
             }else{
                 print("Erro no REST")
             }

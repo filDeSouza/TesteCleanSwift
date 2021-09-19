@@ -21,6 +21,7 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore{
     var presenter: LoginPresentationLogic?
     var worker: LoginWorker?
     var login: LoginModel?
+    var retornoErro: String?
     
     func realizaLogin(request: Login.Acao.Request) {
         worker = LoginWorker()
@@ -31,10 +32,16 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore{
             let response = Login.Acao.Response(login: resultado)
             self.login = response.login
             // MARK: - Chama o Presenter
-            self.presenter?.presentSomething(response: response)
+            self.presenter?.presentLogin(response: response)
             
 
+        }, onError: {(error) in
+
+            self.presenter?.presentErroLogin(erro: error)
+ 
         })
+            
+        
     }
     
 }

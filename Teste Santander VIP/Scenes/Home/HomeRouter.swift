@@ -31,7 +31,7 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing{
         passDataToSomewhere(source: dataStore!, destination: &destinationDS)
       } else {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! LoginViewController
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         var destinationDS = destinationVC.router!.dataStore!
         passDataToSomewhere(source: dataStore!, destination: &destinationDS)
         navigateToLoginViewController(source: viewController!, destination: destinationVC)
@@ -50,12 +50,6 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing{
     func passDataToSomewhere(source: HomeDataStore, destination: inout LoginDataStore)
     {
       //destination.name = source.name
-    }
-    
-    func realizaLogout(){
-        
-        
-        
     }
     
 }

@@ -11,8 +11,7 @@ class AppProvider: LoginProviderProtocol{
     
     let requestAPI = APIRequest()
     
-    func login(request: Login.Acao.Request, completion: @escaping (LoginModel?) -> Void) {
-        
+    func login(request: Login.Acao.Request, completion: @escaping (LoginModel?) -> Void, onError: @escaping (ApiError) -> Void) {
         let url = APIConstants.base_url
         
         APIRequest.login(url: url, login: request.login, senha: request.senha, completion: {(result) in
@@ -24,19 +23,19 @@ class AppProvider: LoginProviderProtocol{
         }, onError: {(error) in
             switch error{
             case .invalidJSON:
-                print("JSON inválido")
+                onError(.invalidJSON)
             case .noData:
-                print("Sem dados")
+                onError(.noData)
             case .noResponse:
-                print("Sem resposta da API")
+                onError(.noResponse)
             case .erroResposta:
-                print("Sem resposta da API")
+                onError(.erroResposta)
             default:
                 print("Erro genérico")
             }
         })
-        
     }
+    
 }
 extension AppProvider: ExtratoProviderProtocol{
         
