@@ -45,8 +45,6 @@ class AppBusiness{
                 do{
                     let extrato = result
                     completion(extrato)
-                }catch{
-                    
                 }
             }else{
                 return

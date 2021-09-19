@@ -14,13 +14,14 @@ protocol HomeDisplayLogic {
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
 
-    
+    // MARK: - Atributos
     var dadosUsuario: LoginModel?
     var dadosExtrato: [ExtratoModel] = []
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
     var utils = Utils()
     
+    //MARK: - Outlets
     @IBOutlet weak var labelNome: UILabel!
     @IBOutlet weak var labelDocumento: UILabel!
     @IBOutlet weak var labelSaldo: UILabel!
@@ -29,7 +30,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     @IBOutlet var viewPrincipal: UIView!
 
     
-    
+    // MARK: - Didload
     required init?(coder aDecoder: NSCoder)
     {
       super.init(coder: aDecoder)
@@ -46,6 +47,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         obtemExtrato()
     }
     
+    // MARK: - Functions
     func setupUsuario() {
         interactor?.homeObtemUsuario(request: Home.ObtemUsuario.Request())
     }
@@ -61,7 +63,15 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         }
     }
     
+    func displayUsuario(usuario: Home.ObtemUsuario.ViewModel) {
+        DispatchQueue.main.async {
+            self.labelNome.text = usuario.usuario.nome
+            self.labelDocumento.text = usuario.usuario.cpf.toCPFNumber()
+            self.labelSaldo.text = self.utils.formatacaoMoeda(valor: (usuario.usuario.saldo))
+        }
+    }
     
+    // MARK: - Setup
     private func setup(){
         let viewController = self
         let interactor = HomeInteractor()
@@ -76,14 +86,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
         
     }
     
-    func displayUsuario(usuario: Home.ObtemUsuario.ViewModel) {
-        DispatchQueue.main.async {
-            self.labelNome.text = usuario.usuario.nome
-            self.labelDocumento.text = usuario.usuario.cpf.toCPFNumber()
-            self.labelSaldo.text = self.utils.formatacaoMoeda(valor: (usuario.usuario.saldo))
-        }
-    }
-
+    // MARK: - Actions
     @IBAction func btLogout(_ sender: Any) {
         
         let alert = UIAlertController(title: "Aviso", message: "Deseja realmente sair?", preferredStyle: .alert)
@@ -98,6 +101,7 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
 }
 
+// MARK: - TableView
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

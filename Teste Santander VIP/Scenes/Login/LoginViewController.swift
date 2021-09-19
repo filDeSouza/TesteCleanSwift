@@ -19,7 +19,7 @@ protocol LoginDisplayLogic: AnyObject {
 class LoginViewController: UIViewController, LoginDisplayLogic {
 
     
-
+    // MARK: - Atributos
     var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
     var loginResult: LoginModel!
@@ -27,11 +27,12 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
     let keyChain = KeychainSwift()
 
     
-    
+    // MARK: - Outlets
     @IBOutlet weak var tfUsuario: UITextField!
     @IBOutlet weak var tfSenha: UITextField!
     @IBOutlet weak var labelErro: UILabel!
     
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         labelErro.isHidden = true
@@ -52,6 +53,8 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
       setup()
     }
     
+    
+    // MARK: - Setup
     private func setup(){
         let viewController = self
         let interactor = LoginInteractor()
@@ -65,7 +68,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
         router.dataStore = interactor
     }
     
-    
+    // MARK: - Functions
     func displayRouterHome(viewModel: Login.Acao.ViewModel) {
         DispatchQueue.main.async {
             //self.loginResult = viewModel.login
@@ -96,6 +99,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic {
 
     }
         
+    // MARK: - Actions
     @IBAction func btLoginAction(_ sender: UIButton) {
         
         sdLoader.startAnimating(atView: self.view)
