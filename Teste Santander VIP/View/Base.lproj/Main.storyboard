@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qn9-aE-o4L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qn9-aE-o4L">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,7 +67,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1lZ-3V-7cr">
-                                                <rect key="frame" x="17" y="18.5" width="286" height="17.5"/>
+                                                <rect key="frame" x="17" y="14.5" width="286" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="SantanderHeadlineW05-Rg" family="SantanderHeadlineW05-Rg" pointSize="15"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
@@ -188,13 +188,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xS-Eh-J0o">
-                                                                <rect key="frame" x="19" y="107.5" width="31" height="21.5"/>
+                                                                <rect key="frame" x="19" y="102" width="28.5" height="27"/>
                                                                 <fontDescription key="fontDescription" name="SantanderLogo-Light" family="Santander Logo" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="abI-ZS-e0N">
-                                                                <rect key="frame" x="58.5" y="106.5" width="251.5" height="23.5"/>
+                                                                <rect key="frame" x="56" y="101" width="254" height="29"/>
                                                                 <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="20"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -223,7 +223,7 @@
                                                         <rect key="frame" x="0.0" y="140" width="320" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="CPF/CNPJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQW-MS-VPD">
-                                                                <rect key="frame" x="20" y="18" width="83.5" height="37.5"/>
+                                                                <rect key="frame" x="20" y="18" width="69" height="31.5"/>
                                                                 <fontDescription key="fontDescription" name="SantanderLogo-Light" family="Santander Logo" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -248,13 +248,13 @@
                                                         <rect key="frame" x="0.0" y="240" width="320" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEo-pk-gau">
-                                                                <rect key="frame" x="20" y="23" width="44" height="20"/>
+                                                                <rect key="frame" x="20" y="23" width="40.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="SantanderLogo-Light" family="Santander Logo" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="ValorSaldo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gz-k3-04s">
-                                                                <rect key="frame" x="20" y="50.5" width="281" height="38.5"/>
+                                                                <rect key="frame" x="20" y="51" width="281" height="38"/>
                                                                 <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -296,7 +296,7 @@
                                         <color key="sectionIndexBackgroundColor" systemColor="systemGray4Color"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellExtrato" rowHeight="148" id="hR1-ne-sIH" customClass="ExtratoTableViewCell" customModule="Teste_Santander_VIP" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="148"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="320" height="148"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hR1-ne-sIH" id="Mfm-LD-mc4">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
@@ -315,7 +315,7 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="64"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9Y-mj-Nps">
-                                                                                            <rect key="frame" x="8" y="21" width="124" height="20"/>
+                                                                                            <rect key="frame" x="8" y="21" width="124" height="20.5"/>
                                                                                             <fontDescription key="fontDescription" name="SantanderLogo-Light" family="Santander Logo" pointSize="17"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
@@ -331,7 +331,7 @@
                                                                                     <rect key="frame" x="140" y="0.0" width="140" height="64"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBZ-D8-euP">
-                                                                                            <rect key="frame" x="8" y="21" width="124" height="20"/>
+                                                                                            <rect key="frame" x="8" y="21" width="124" height="20.5"/>
                                                                                             <fontDescription key="fontDescription" name="SantanderLogo-Light" family="Santander Logo" pointSize="17"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
@@ -495,7 +495,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NJR-6d-ew5"/>
         <segue reference="Uli-fC-yHu"/>
     </inferredMetricsTieBreakers>
     <resources>

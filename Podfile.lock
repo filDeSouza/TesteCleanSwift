@@ -1,20 +1,40 @@
 PODS:
   - Alamofire (5.4.3)
+  - CPF-CNPJ-Validator (1.0.2)
   - CryptoSwift (1.4.1)
+  - KeychainSwift (19.0.0)
+  - PasswordTextField (1.2.0)
+  - SDLoader (0.2.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire
+  - CPF-CNPJ-Validator
   - CryptoSwift
+  - KeychainSwift (~> 19.0)
+  - PasswordTextField
+  - SDLoader
+  - SVProgressHUD (= 2.2.5)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CPF-CNPJ-Validator
     - CryptoSwift
+    - KeychainSwift
+    - PasswordTextField
+    - SDLoader
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  CPF-CNPJ-Validator: 0b08069595da2c4b20e964b743bfc0a7334d5347
   CryptoSwift: 0bc800a7e6a24c4fc9ebeab97d44b0d5f73a78bd
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
+  SDLoader: e35b571db413a4a98b6f58469b16dc095289c9f6
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: d0900b8b43d5d89d6a137c44f821e4fa307dfe3a
+PODFILE CHECKSUM: 9dd35e26cc65d230d8fe232a95373390b3a62038
 
 COCOAPODS: 1.11.0
